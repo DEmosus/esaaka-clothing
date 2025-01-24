@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
+    "@stripe/react-stripe-js": "^3.1.1",
+    "@stripe/stripe-js": "^5.5.0",
+    "dotenv": "^16.4.7",
     "firebase": "^11.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
@@ -18,7 +21,10 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.1",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "reselect": "^5.1.1",
     "sass": "^1.83.1",
+    "stripe": "^17.5.0",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {

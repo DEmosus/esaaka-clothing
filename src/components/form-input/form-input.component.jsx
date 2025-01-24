@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import { FormInputContainer, FormInputLabel, GroupContainer } from "./form-input.styles";
 
 const FormInput = ({ label, ...otherProps }) => {

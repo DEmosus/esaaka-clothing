@@ -42,7 +42,7 @@ export const EmptyMessage = styled.span`
     font-size: 16px;
     margin: 30px auto;
   }
-`;    
+`;
 
 export const CartItemContainer = styled.div`
   height: 240px;

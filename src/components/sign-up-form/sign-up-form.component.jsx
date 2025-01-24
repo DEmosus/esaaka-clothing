@@ -3,6 +3,7 @@ import { useState } from "react";
 import { createAuthUserWithEmailAndPassword, createUserProfileDocument } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
+
 import { SignUpContainer } from "./sign-up-form.styles";
 
 const SignUpForm = () => {
@@ -41,7 +42,6 @@ const SignUpForm = () => {
         <FormInput
           label="Full Name"
           type="text"
-          // placeholder="Full Name"
           value={fullName}
           onChange={(event) => setFullName(event.target.value)}
           required
@@ -50,7 +50,6 @@ const SignUpForm = () => {
         <FormInput
           label="Email"
           type="email"
-          // placeholder="Email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           required
@@ -59,7 +58,6 @@ const SignUpForm = () => {
         <FormInput
           label="Password"
           type="password"
-          // placeholder="Password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           required
@@ -68,7 +66,6 @@ const SignUpForm = () => {
         <FormInput
           label="Confirm Password"
           type="password"
-          // placeholder="Confirm Password"
           value={confirmPassword}
           onChange={(event) => setConfirmPassword(event.target.value)}
           required

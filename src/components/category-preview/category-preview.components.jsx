@@ -1,8 +1,10 @@
-import ProductCard from "../product-card/product-card.component";
 import PropTypes from 'prop-types';
+
+import ProductCard from "../product-card/product-card.component";
+
 import { CategoryPreviewContainer, PreviewContainer, TitleContainer } from "./category-preview.styles";
 
-const CategoryPreview = ({title, products}) => {
+const CategoryPreview = ({ title, products }) => {
   return (
     <CategoryPreviewContainer>
       <h2>
@@ -10,7 +12,7 @@ const CategoryPreview = ({title, products}) => {
       </h2>
       <PreviewContainer>
         {products.filter((_, idx) => idx < 4).map((product) => (
-          <ProductCard key={product.id} product={product}/>
+          <ProductCard key={product.id} product={product} />
         ))}
       </PreviewContainer>
     </CategoryPreviewContainer>

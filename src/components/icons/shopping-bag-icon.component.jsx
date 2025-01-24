@@ -4,6 +4,4 @@ const ShoppingBagIcon = () => {
   )
 }
 
-
-
 export default ShoppingBagIcon;

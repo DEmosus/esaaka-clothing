@@ -7,18 +7,59 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build directories
+dist/
+dist-ssr/
+.built/
+.build/
+out/
+public/
+
+# Local Netlify folder
+.netlify/
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE specific files
+*.iml
+*.ipr
+*.iws
+
+# Miscellaneous
+*.local
+*.lock
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Configuration files
+netlify.toml
+vite.config.js
+eslint.config.js
