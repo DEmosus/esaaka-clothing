@@ -8,22 +8,23 @@ import { rootReducer } from "./root-reducer";
 const persistConfig = {
   key: "root",
   storage,
-  blacklist: ["user"]
+  blacklist: ["user"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-
 const middleWares = (getDefaultMiddleware) =>
-  getDefaultMiddleware({
-    serializableCheck: false
-  }).concat(
-    import.meta.MODE !== "production" ? [logger] : []
-  );
+  import.meta.env.MODE !== "production"
+    ? getDefaultMiddleware({
+        serializableCheck: false,
+      }).concat(logger)
+    : getDefaultMiddleware({
+        serializableCheck: false,
+      });
 
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: middleWares
-})
+  middleware: middleWares,
+});
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);
