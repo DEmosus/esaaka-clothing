@@ -59,7 +59,3 @@ $RECYCLE.BIN/
 *.seed
 *.pid.lock
 
-# Configuration files
-netlify.toml
-vite.config.js
-eslint.config.js
