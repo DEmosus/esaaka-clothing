@@ -74,11 +74,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
   const userRef = doc(db, `users/${userAuth.uid}`);
-  // console.log(userRef);
 
   const snapShot = await getDoc(userRef);
-  // console.log(snapShot);
-  // console.log(snapShot.exists());
 
   if (!snapShot.exists()) {
     const { displayName, email } = userAuth;
@@ -111,7 +108,6 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
       password
     );
     const user = userCredential.user;
-    console.log("User signed up:", user);
     return user;
   } catch (error) {
     if (error.code === "auth/email-already-in-use") {
@@ -134,7 +130,6 @@ export const signInUserWithEmailAndPassword = async (email, password) => {
       password
     );
     const user = userCredential.user;
-    console.log("User signed in:", user);
     return user;
   } catch (error) {
     if (error.code === "auth/invalid-credential") {

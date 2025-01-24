@@ -17,7 +17,6 @@ const App = () => {
       if (user) {
         createUserProfileDocument(user);
       }
-      // const pickedUser = user && (({accessToken, email}) => ({accessToken, email}))(user);
       dispatch(setCurrentUser(user));
     })
     return unsubscribe;
