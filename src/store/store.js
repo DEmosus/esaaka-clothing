@@ -18,7 +18,7 @@ const middleWares = (getDefaultMiddleware) =>
   getDefaultMiddleware({
     serializableCheck: false
   }).concat(
-    import.meta.NODE_ENV !== "production" ? [logger] : []
+    import.meta.MODE !== "production" ? [logger] : []
   );
 
 export const store = configureStore({
