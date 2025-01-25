@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { VitePWA } from 'vite-plugin-pwa'
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
@@ -8,6 +9,32 @@ export default defineConfig({
     svgr({
       svgrOptions: {
         icon: true,
+      },
+    }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'favicon.svg'],
+      manifest: {
+        name: 'Esaaka Clothing',
+        short_name: 'Esaaka Clothing',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: 'favicon-64x64.png',
+            sizes: '64x64',
+            type: 'image/png',
+          },
+          {
+            src: 'web-app-manifest-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'web-app-manifest-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
       },
     }),
   ],

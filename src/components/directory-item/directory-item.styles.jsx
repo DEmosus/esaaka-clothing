@@ -49,7 +49,7 @@ export const BackgroundImage = styled.img`
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
-    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    transition: transform 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
 
   width: 100%;
@@ -65,7 +65,8 @@ export const BackgroundImage = styled.img`
 `;
 
 export const DirectoryBodyContainer = styled.div`
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* opacity: 0.9; */
 
   height: 90px;
   padding: 0 25px;

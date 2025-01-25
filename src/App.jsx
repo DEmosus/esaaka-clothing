@@ -9,6 +9,7 @@ import Authenticaton from "./routes/authentication/authentication.component";
 import Shop from "./components/shop/shop.component";
 import CheckoutPage from "./routes/check-out/check-out.component";
 import { setCurrentUser } from "./store/user/user.reducer";
+import { GlobalStyles } from "../global.styles";
 
 const App = () => {
   const dispatch = useDispatch()
@@ -23,16 +24,17 @@ const App = () => {
   }, [dispatch])
 
   return (
-
-    <Routes>
-      <Route path="/" element={<Navigation />} >
-        <Route index element={<Home />} />
-        <Route path="shop/*" element={<Shop />} />
-        <Route path="auth" element={<Authenticaton />} />
-        <Route path="checkout" element={<CheckoutPage />} />
-      </Route>
-    </Routes>
-
+    <>
+      <GlobalStyles />
+      <Routes>
+        <Route path="/" element={<Navigation />} >
+          <Route index element={<Home />} />
+          <Route path="shop/*" element={<Shop />} />
+          <Route path="auth" element={<Authenticaton />} />
+          <Route path="checkout" element={<CheckoutPage />} />
+        </Route>
+      </Routes>
+    </>
   )
 }
 
