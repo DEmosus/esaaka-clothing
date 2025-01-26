@@ -13,7 +13,7 @@ const Home = lazy(() => import("./routes/home/home.component"));
 const Authenticaton = lazy(() => import("./routes/authentication/authentication.component"));
 
 import { GlobalStyles } from "../global.styles";
-import CookieConsent from "react-cookie-consent";
+// import CookieConsent from "react-cookie-consent";
 
 const App = () => {
   const dispatch = useDispatch()
@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <>
-      <CookieConsent
+      {/* <CookieConsent
         location="bottom"
         buttonText="I understand"
         style={{ background: "#2B373B", height: "2.5rem", fontSize: "10px" }}
@@ -38,7 +38,7 @@ const App = () => {
       >
         This website uses cookies to enhance the user experience.{" "}
         <span style={{ fontSize: "10px" }}>Learn more about our <a href="/cookie-policy">cookie policy</a>.</span>
-      </CookieConsent>
+      </CookieConsent> */}
       <Suspense fallback={<Spinner />}>
         <GlobalStyles />
         <Routes>
