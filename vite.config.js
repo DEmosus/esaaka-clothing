@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { VitePWA } from 'vite-plugin-pwa'
+import inspect from 'vite-plugin-inspect';
+import { VitePWA } from 'vite-plugin-pwa';
+import { imagetools } from "vite-imagetools";
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
@@ -11,6 +13,8 @@ export default defineConfig({
         icon: true,
       },
     }),
+    inspect(),
+    imagetools(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'favicon.svg'],

@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const CategoriesContainer = styled.div`
-  width: 100%;
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   img {
     width: 100%;
-    height: 100%;
+    height: 240px;//new 100%
     object-fit: cover;
+    aspect-ratio: 16/9;
   }
 
   @media (max-width: 768px) {
@@ -17,8 +18,9 @@ export const CategoriesContainer = styled.div`
     align-items: center;
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 90vw;
+      height: auto;
+      max-width: 32rem;
       object-fit: cover;
     }
   }

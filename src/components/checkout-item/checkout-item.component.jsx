@@ -16,7 +16,7 @@ const CheckoutItem = ({ cartItem }) => {
   return (
     <CheckoutItemContainer>
       <ImageContainer>
-        <img src={imageUrl} alt={`${name}`} />
+        <img src={imageUrl} alt={`${name}`} loading="lazy"/>
       </ImageContainer>
       <NameOfItem>{name}</NameOfItem>
       <QuantityOfItem>

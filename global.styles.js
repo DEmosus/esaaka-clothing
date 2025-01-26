@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
  :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-display: swap;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;

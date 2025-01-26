@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
   
   return (
     <ProductCardContainer>
-      <img src={imageUrl} alt={`${name}`} />
+      <img src={imageUrl} alt={`${name}`} loading="lazy"/>
       <Footer>
         <Name>{name}</Name>
         <Price>{price}</Price>
