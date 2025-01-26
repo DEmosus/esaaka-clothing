@@ -29,11 +29,11 @@ const App = () => {
 
   return (
     <>
-     <CookieConsent
+      <CookieConsent
         location="bottom"
         buttonText="I understand"
-        style={{ background: "#2B373B" }}
-        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        style={{ background: "#2B373B", height: "2.5rem", fontSize: "10px" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "10px" }}
         expires={150}
       >
         This website uses cookies to enhance the user experience.{" "}

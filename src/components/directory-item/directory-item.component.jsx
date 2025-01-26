@@ -9,7 +9,7 @@ const DirectoryItem = ({ title, imageUrl, route }) => {
 
   return (
     <DirectoryItemContainer onClick={onNavigateHandler}>
-      <BackgroundImage src={imageUrl} alt={title} loading="lazy" srcSet=""/>
+      <BackgroundImage src={imageUrl} alt={title} srcSet=""/>
       <DirectoryBodyContainer>
         <h2>{title}</h2>
         <p>Shop now</p>
