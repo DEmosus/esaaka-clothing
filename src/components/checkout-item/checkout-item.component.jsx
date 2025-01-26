@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from "../../store/cart/cart.reducer";
 
 import { Arrow, CheckoutItemContainer, ImageContainer, NameOfItem, PriceOfItem, QuantityOfItem, RemoveButton, Value } from "./checkout-item.styles";
+import { memo } from "react";
 
-const CheckoutItem = ({ cartItem }) => {
+const CheckoutItem = memo(({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   const dispatch = useDispatch()
 
@@ -28,7 +29,9 @@ const CheckoutItem = ({ cartItem }) => {
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
   )
-}
+})
+
+CheckoutItem.displayName = 'CheckoutItem';
 
 CheckoutItem.propTypes = {
   cartItem: PropTypes.shape({

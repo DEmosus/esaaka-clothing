@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 
 import { CartItemContainer, ItemDetailsContainer, NameContainer, PriceContainer } from "./cart-item.styles";
+import { memo } from "react";
 
-const CartItem = ({ cartItem }) => {
+const CartItem = memo(({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
     <CartItemContainer>
@@ -13,7 +14,9 @@ const CartItem = ({ cartItem }) => {
       </ItemDetailsContainer>
     </CartItemContainer>
   )
-}
+})
+
+CartItem.displayName = 'CartItem';
 
 CartItem.propTypes = {
   cartItem: PropTypes.shape({

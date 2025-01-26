@@ -4,6 +4,7 @@ import inspect from 'vite-plugin-inspect';
 import { VitePWA } from 'vite-plugin-pwa';
 import { imagetools } from "vite-imagetools";
 import svgr from "vite-plugin-svgr";
+import {visualizer} from "rollup-plugin-visualizer";
 
 export default defineConfig({
   plugins: [
@@ -41,7 +42,26 @@ export default defineConfig({
         ],
       },
     }),
+    visualizer({ open: true}),
   ],
+  build: {
+    minify: "esbuild", // Using esbuild for fast minification
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            return 'vendor'; // Separate vendor code
+          }
+        },
+      },
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.log statements
+        drop_debugger: true, // Remove debugger statements
+      },
+    },
+  },
   server: {
     proxy: {
       "/.netlify/functions": {
@@ -50,6 +70,7 @@ export default defineConfig({
         secure: false,
       },
     },
+    historyApiFallback: true,
   },
   assetsInclude: ["**/*.svg"],
 });

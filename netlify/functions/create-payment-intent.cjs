@@ -15,11 +15,11 @@ exports.handler = async (event) => {
       body: JSON.stringify({ paymentIntent }),
     };
   } catch (error) {
-    console.log({ error });
+    console.error('Error creating payment intent:', error);
 
     return {
-      status: 400,
-      body: JSON.stringify({ error }),
+      status: 500,
+      body: JSON.stringify({ error: 'Internal Server Error' }),
     };
   }
 };

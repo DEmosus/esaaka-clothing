@@ -20,40 +20,69 @@ const PaymentForm = () => {
       return;
     }
     setIsProcessingPayment(true);
+    try {
+      const response = await fetch("/.netlify/functions/create-payment-intent", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ amount: amount * 100 }),
+      }).then((res) => res.json());
+      if (response.error) {
+        console.error('Error creating payment intent:', response.error);
+        alert('Error creating payment intent.');
+        setIsProcessingPayment(false);
+        return;
+      }
+      // const {paymentIntent: { client_secret}} = response;
+      const clientSecret = response.paymentIntent.client_secret;
+      console.log(clientSecret);
+      const paymentResult = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+          billing_details: {
+            name: currentUser ? currentUser.fullName : "Guest",
+          }
+        }
+      })
+      setIsProcessingPayment(false);
 
-    const response = await fetch("/.netlify/functions/create-payment-intent", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ amount: amount * 100 }),
-    }).then((res) => res.json());
-    // const {paymentIntent: { client_secret}} = response;
-    const clientSecret = response.paymentIntent.client_secret;
-    console.log(clientSecret);
-    const paymentResult = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement(CardElement),
-        billing_details: {
-          name: currentUser ? currentUser.fullName : "Guest",
+      if (paymentResult.error) {
+        alert(paymentResult.error.message);
+      } else {
+        if (paymentResult.paymentIntent.status === "succeeded") {
+          alert("Payment Successful")
         }
       }
-    })
-    setIsProcessingPayment(false);
-
-    if (paymentResult.error) {
-      alert(paymentResult.error);
-    } else {
-      if (paymentResult.paymentIntent.status === "succeeded") {
-        alert("Payment Successful")
-      }
+    } catch (error) {
+      console.error('Error processing payment:', error);
+      alert('Error processing payment.');
+      setIsProcessingPayment(false);
     }
   }
+
+  const cardElementOptions = {
+    style: {
+      base: {
+        color: '#454580',
+        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontSmoothing: 'antialiased',
+        fontSize: '16px',
+        '::placeholder': {
+          color: '#1E1E24',
+        },
+      },
+      invalid: {
+        color: '#fa755a',
+        iconColor: '#fa755a',
+      },
+    },
+  };
   return (
     <PaymentFormContainer >
       <FormContainer onSubmit={paymentHandler}>
         <h2>Credit Card Payment: </h2>
-        <CardElement />
+        <CardElement options={cardElementOptions}/>
         <PaymentButton isLoading={isProcessingPayment} buttonType={BUTTON_TYPES_CLASSES.inverted}>Pay Now</PaymentButton>
       </FormContainer>
     </PaymentFormContainer>
