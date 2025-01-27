@@ -3,15 +3,15 @@ import { BaseButton, GoogleSignInButton, InvertedButton } from "../button/button
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
-  width: 240px;
-  height: 340px;
+  width: 15rem;
+  height: 21rem;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 1.2rem;
   border: 1px solid black;
   background-color: white;
-  top: 90px;
-  right: 40px;
+  top: 5.6rem;
+  right: 2.5rem;
   z-index: 5;
 
   ${BaseButton},
@@ -20,12 +20,12 @@ export const CartDropdownContainer = styled.div`
     margin-top: auto;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     /* width: 100%; */
-    right: 20px;
-    margin-top: 150px;
-    top: 70px;
-    padding: 10px;
+    right: 1.2rem;
+    margin-top: 9.3rem;
+    top: 4.3rem;
+    padding: 0.6rem;
 
     button {
       width: 100%;
@@ -35,23 +35,23 @@ export const CartDropdownContainer = styled.div`
 `;
 
 export const EmptyMessage = styled.span` 
-  font-size: 18px;
-  margin: 50px auto;
+  font-size: 1.1rem;
+  margin: 3.1rem auto;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
-    margin: 30px auto;
+  @media (max-width: 48rem) {
+    font-size: 1rem;
+    margin: 1.8rem auto;
   }
 `;
 
 export const CartItemContainer = styled.div`
-  height: 240px;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   overflow: scroll;
 
-  @media (max-width: 768px) {
-    height: 250px;
+  @media (max-width: 48rem) {
+    height: 15.6rem;
   }
 `;
 

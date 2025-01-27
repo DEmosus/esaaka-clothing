@@ -6,21 +6,21 @@ export const CheckoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px 0;
+  margin: 0.3rem 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0.6rem;
   }
 `
 export const CheckoutHeader = styled.div`
   width: 100%;
-  padding: 10px 0;
+  padding: 0.6rem 0;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -40,39 +40,39 @@ export const HeaderBlock = styled.div`
   &:nth-child(1)::after { 
     content: "Prod."; 
     display: block; 
-    font-size: 15px; 
+    font-size: 0.9rem; 
     text-align: center; 
   } 
     
   &:nth-child(2)::after { 
     content: "Desc."; 
     display: block; 
-    font-size: 15px; 
+    font-size: 0.9rem; 
     text-align: center; 
   } 
 
   &:nth-child(3)::after { 
     content: "Qty"; 
     display: block; 
-    font-size: 15px; 
+    font-size: 0.9rem; 
     text-align: center; 
   } 
 
   &:nth-child(4)::after { 
     content: "$"; 
     display: block; 
-    font-size: 15px; 
+    font-size: 0.9rem; 
     text-align: center; 
   } 
 
   &:nth-child(5)::after { 
     content: "Del."; 
     display: block; 
-    font-size: 15px; 
+    font-size: 0.9rem; 
     text-align: center; 
   } 
 
-  @media (min-width: 769px) { 
+  @media (min-width: 48rem) { 
     span { 
       display: inline; 
     } 
@@ -86,13 +86,13 @@ export const HeaderBlock = styled.div`
   }
 `;
 export const Total = styled.span` 
-  margin-top: 30px; 
+  margin-top: 1.8rem; 
   margin-left: auto; 
-  font-size: 36px; 
+  font-size: 2.2rem; 
 
-  @media (max-width: 768px) { 
-    font-size: 28px; 
-    margin-top: 20px;
+  @media (max-width: 48rem) { 
+    font-size: 1.7rem; 
+    margin-top: 1.2rem;
   } 
 `;
 

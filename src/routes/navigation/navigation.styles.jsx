@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const NavigationContainer = styled.nav`
-  height: 70px;
+  height: 4.3rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
-  padding: 0 20px;
+  margin-bottom: 1.5rem;
+  padding: 0 1.2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     flex-direction: column;
     height: auto;
-    padding: 10px;
+    padding: 0.6rem;
   }
 `
 export const LogoContainer = styled.div`
@@ -27,27 +27,27 @@ export const LogoContainer = styled.div`
     height: auto; 
     width: auto; 
   } 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     justify-content: center;
-    margin-bottom: 10px; 
+    margin-bottom: 0.6rem; 
   }
   
 `
 
 export const NavLink = styled(Link)`
-  margin-left: 15px; 
-  padding: 10px 15px; 
+  margin-left: 0.9rem; 
+  padding: 0.6rem 0.9rem; 
   cursor: pointer; 
   text-decoration: none; 
   color: inherit; /* Inherit color from parent */ 
-  font-size: 16px; 
+  font-size: 1rem; 
   white-space: nowrap; 
   &:hover { 
     color: #5855f7; /* Hover effect on individual items */ 
   } 
-  @media (max-width: 768px) { 
+  @media (max-width: 48rem) { 
     margin-left: 0; 
-    padding: 10px 20px; 
+    padding: 0.6rem 1.2rem; 
   }
  
 `
@@ -60,7 +60,7 @@ export const NavigationList = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 768px) { 
+  @media (max-width: 48rem) { 
     flex-direction: column; 
     align-items: center; 
   }
@@ -73,9 +73,9 @@ export const NavigationItem = styled.li`
   align-items: center;
   justify-content: flex-end;
 
-  @media (max-width: 768px) { 
+  @media (max-width: 48rem) { 
     width: 100%; 
     justify-content: center; 
-    margin-bottom: 10px; 
+    margin-bottom: 0.6rem; 
   }
 `

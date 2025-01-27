@@ -2,25 +2,25 @@ import styled from "styled-components";
 import Button from "../button/button.component";
 
 export const PaymentFormContainer = styled.div`
-  height: 300px;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     height: auto;
-    padding: 40px;
+    padding: 2.5rem;
   }
 `;
 
 export const FormContainer = styled.form`
-  height: 100px;
-  min-width: 500px;
-  padding: 20px;
+  height: 6.2rem;
+  min-width: 31rem;
+  padding: 1.2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     min-width: 100%;
     height: auto;
   }
@@ -28,11 +28,11 @@ export const FormContainer = styled.form`
 
 export const PaymentButton = styled(Button)`
   margin-left: auto;
-  margin-top: 30px;
+  margin-top: 1.8rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 1.2rem;
     width: 100%;
   }
 `

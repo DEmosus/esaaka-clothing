@@ -4,21 +4,21 @@ const subColor = "grey";
 const mainColor = "black";
 
 const shrinkLabelStles = css`
-  top: -22px;
-  font-size: 16px;
+  top: -1.3rem;
+  font-size: 1rem;
   color: ${mainColor};
 `
 
 export const GroupContainer = styled.div`
   position: relative;
-  margin: 45px 0;
+  margin: 2.8rem 0;
 
   input[type="password"] {
     letter-spacing: 0.3em;
   }
 
-  @media (max-width: 768px) {
-    margin: 30px 0;
+  @media (max-width: 48rem) {
+    margin: 1.8rem 0;
   }
 `;
 
@@ -26,14 +26,14 @@ export const FormInputContainer = styled.input`
   background: none;
   background-color: white;
   color: ${subColor};
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
+  font-size: 1.1rem;
+  padding: 0.6rem 0.6rem 0.6rem 0.3rem;
   display: block;
   width: 100%;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid ${subColor};
-  margin: 25px 0;
+  margin: 1.5rem 0;
 
   &:focus {
     outline: none;
@@ -43,33 +43,33 @@ export const FormInputContainer = styled.input`
     ${shrinkLabelStles}
   }
 
-  @media (max-width: 768px) {
-    font-size: 16px;
-    padding: 8px 8px 8px 4px;
-    margin: 20px 0;
+  @media (max-width: 48rem) {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.2rem;
+    margin: 1.2rem 0;
   }
 `;
 
 export const FormInputLabel = styled.label`
   color: ${subColor};
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
-  left: 5px;
-  top: 10px;
+  left: 0.3rem;
+  top: 0.6rem;
   transition: 300ms ease all;
 
   &.shrink {
     ${shrinkLabelStles}
   }
 
-  @media (max-width: 768px) {
-    font-size: 14px;
-    top: 8px;
+  @media (max-width: 48rem) {
+    font-size: 0.8rem;
+    top: 0.5rem;
     &.shrink {
       top: -12px;
-      font-size: 10px;
+      font-size: 0.6rem;
     }
   }
 `;

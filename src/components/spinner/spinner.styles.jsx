@@ -7,19 +7,19 @@ export const SpinnerOverlay = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     height: 50vh; 
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 30rem) {
     height: 40vh; 
   }
 `;
 
 export const SpinnerContainer = styled.div`
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 3.1rem;
+  height: 3.1rem;
   border: 3px solid rgba(195, 195, 195, 0.6);
   border-radius: 50%;
   border-top-color: #636767;
@@ -36,13 +36,13 @@ export const SpinnerContainer = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    width: 40px; // Adjust size for smaller screens
-    height: 40px; 
+  @media (max-width: 48rem) {
+    width: 2.5rem; // Adjust size for smaller screens
+    height: 2.5rem; 
   }
 
-  @media (max-width: 480px) {
-    width: 30px; // Adjust size for even smaller screens
-    height: 30px; 
+  @media (max-width: 30rem) {
+    width: 1.8rem; // Adjust size for even smaller screens
+    height: 1.8rem; 
   }
 `;

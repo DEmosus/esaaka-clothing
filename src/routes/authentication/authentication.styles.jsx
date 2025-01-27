@@ -4,11 +4,11 @@ export const AuthenticationContainer = styled.div`
   display: flex;
   width: 900px;
   justify-content: space-between;
-  margin: 30px auto;
+  margin: 1.8rem auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     flex-direction: column;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0.6rem;
 }
 `;

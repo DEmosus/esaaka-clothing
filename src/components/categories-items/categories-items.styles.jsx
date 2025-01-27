@@ -8,12 +8,12 @@ export const CategoriesContainer = styled.div`
 
   img {
     width: 100%;
-    height: 240px;//new 100%
+    height: 15rem;//new 100%
     object-fit: cover;
     aspect-ratio: 16/9;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     flex-direction: column;
     align-items: center;
 

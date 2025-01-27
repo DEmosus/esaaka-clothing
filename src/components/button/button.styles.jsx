@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const BaseButton = styled.button`
-  min-width: 165px;
+  min-width: 10.3rem;
   width: auto;
-  height: 50px;
+  height: 3.1rem;
   letter-spacing: 0.5px;
-  line-height: 50px;
+  line-height: 3.1rem;
   // padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 0.9rem;
   background-color: black;
   color: white;
   text-transform: uppercase;
@@ -25,12 +25,12 @@ export const BaseButton = styled.button`
     border: 1px solid black;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
   .button-container {
-    min-width: 120px;
-    font-size: 14px;
-    height: 45px;
-    line-height: 45px;
+    min-width: 7.5rem;
+    font-size: 0.8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
   }
 }
 `;
@@ -59,8 +59,8 @@ export const InvertedButton = styled(BaseButton)`
 
 export const ButtonSpinner = styled.div`
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 1.8rem;
+  height: 1.8rem;
   border: 3px solid rgba(195, 195, 195, 0.6);
   border-radius: 50%;
   border-top-color: #636767;

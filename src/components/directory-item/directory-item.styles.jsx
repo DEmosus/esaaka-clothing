@@ -56,7 +56,7 @@ export const BackgroundImage = styled.img`
   }
 
   width: 80vw;
-  height: 300px;//new
+  height: 18rem;//new
   /* height: 100%; */
   background-size: cover;
   background-position: center;
@@ -86,6 +86,6 @@ export const DirectoryBodyContainer = styled.div`
 
   @media (max-width: 48rem) {
     height: 5rem;
-    padding: 10px;
+    padding: 0.6rem;
   }
 `;

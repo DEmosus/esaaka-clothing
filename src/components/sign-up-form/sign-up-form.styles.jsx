@@ -3,18 +3,18 @@ import styled from "styled-components";
 export const SignUpContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 23.7rem;
 
   h2 {
-    margin: 10px 0;
+    margin: 0.6rem 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
 
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0.6rem;
   }
   h2 {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 `;
